@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
@@ -7,42 +6,43 @@
 	<title>Terrenos</title>
 </head>
 <body>
-	<h1>Intrucciones</h1>
+	<h1>Instrucciones</h1>
 	<label for="H">Ingrese el ancho del terreno:</label>
 	<input type="number" id="H" name="H">
     <label for="L">Ingrese el largo del terreno:</label>
     <input type="number" id="L" name="L">
-    <button type= "button"onclick= "tr()">Calcular</button>
-    <button type= "button"onclick= "sr()">Regresar al menu principal</button>
-    <h1>Informacion</h1>
+    <button type="button" onclick="tr()">Calcular</button>
+    <button type="button" onclick="sr()">Regresar al menú principal</button>
+    <h1>Información</h1>
     <p><span id="Ar"></span></p>
     <p><span id="Pr"></span></p>
     <p><span id="Cs"></span></p>
     <p><span id="Cs2"></span></p>
+
 <script>
 	function tr() {
-		const H1= parseFloat(document.getElementById('H').value);
-		const L1= parseFloat(document.getElementById('L').value);
+		const H1 = parseFloat(document.getElementById('H').value);
+		const L1 = parseFloat(document.getElementById('L').value);
 		const A = H1 * L1;
 		const P = 2 * (H1 + L1);
-		const C = A * 1000
-		document.getElementById("Ar").textContent="Area del terreno: " + H1 + "x" + L1 + "= " + A.toFixed(2) + "m²";
-		document.getElementById("Pr").textContent="Perimetro del terreno: " + "(" + H1 + "+" + L1 + ")" + "x2= " + P.toFixed(2) + "m";
-		document.getElementById("Cs").textContent="Precio del terreno: " + A + "m² x1000= " + "Q." + C.toFixed(2);
+		const C = A * 1000;
+		document.getElementById("Ar").textContent = "Área del terreno: " + H1 + "x" + L1 + "= " + A.toFixed(2) + "m²";
+		document.getElementById("Pr").textContent = "Perímetro del terreno: " + "(" + H1 + "+" + L1 + ")" + "x2= " + P.toFixed(2) + "m";
+		document.getElementById("Cs").textContent = "Precio del terreno: " + A + "m² x1000= " + "Q." + C.toFixed(2);
 
-		if (C>=500000) {
-			document.getElementById("Cs2").textContent="Tipo: Caro";
+		if (C >= 500000) {
+			document.getElementById("Cs2").textContent = "Tipo: Caro";
 		}
-		else if (C>=250000) {
-			document.getElementById("Cs2").textContent="Tipo: Normal";
+		else if (C >= 250000) {
+			document.getElementById("Cs2").textContent = "Tipo: Normal";
 		}
 		else {
-			document.getElementById("Cs2").textContent="Tipo: Barato";
+			document.getElementById("Cs2").textContent = "Tipo: Barato";
 		}
     }
+
     function sr() {
-    	window.open("https://beremis69.github.io/Proyecto.html/");
-    	window.close("https://beremis69.github.io/Trrenos/");
+    	window.location.href = "https://beremis69.github.io/Proyecto.html/";
     }
 </script>
 </body>
